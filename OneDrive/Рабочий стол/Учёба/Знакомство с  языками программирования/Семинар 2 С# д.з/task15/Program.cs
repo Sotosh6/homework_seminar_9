@@ -8,8 +8,8 @@ Console.WriteLine("Введите номер для недели:");
 int number = Convert.ToInt32(Console.ReadLine());
 bool checkNumber = CheckNumber(number);
 Console.WriteLine(checkNumber == true ? "Да" : "Нет");
-
 bool CheckNumber(int num)
 {
-    return num == 6 || num == 7;
+   return num == 6 || num == 7;
 }
+
