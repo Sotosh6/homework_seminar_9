@@ -3,19 +3,22 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-int number1 = UserInput("Введите первое число: ");
-int number2 = UserInput("Введите второе число: ");
+int number1 = UserInput("Введите первое положительное натуральное число: ");
+int number2 = UserInput("Введите второе положительное натуральное число: ");
 NaturalNumberTotal(number1, number2);
 int total = NaturalNumberTotal(number1,number2);
-Console.WriteLine($"Сумма всех чисел в промежутке между {number1} и {number2} равна: {total}");
+Console.WriteLine($"Сумма всех нат. чисел в промежутке между {number1} и {number2} равна: {total}");
 
 int NaturalNumberTotal(int num1, int num2)
 {               
-    if (num1 == num2) return num1;
+    if (num1 == num2) 
+    return num1;
 
-    else if (num1 < num2) return num2 + NaturalNumberTotal(num1, num2 - 1);
+    else if (num1 < num2) 
+    return num2 + NaturalNumberTotal(num1, num2 - 1);
 
-    else return num2 + NaturalNumberTotal(num1, num2 + 1);            
+    else 
+    return num2 + NaturalNumberTotal(num1, num2 + 1);            
 }
 
 
